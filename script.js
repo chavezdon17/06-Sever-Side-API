@@ -3,10 +3,15 @@ var inputValue = document.querySelector(".inputValue");
 var name = document.querySelector(".name");
 var desc = document.querySelector(".desc");
 var temp = document.querySelector(".temp");
+var icon = document.querySelector("icon");
 
 var $cityButtonEl = $("#city-button-element");
-
+var $recentSearchEl = $("#recent_searches");
 var cityArr = [];
+
+if (localStorage.getItem("response")) {
+  cityArr = JSON.parse(localStorage.getItem("response"));
+}
 
 button.addEventListener("click", function () {
   var lat;
@@ -26,7 +31,7 @@ button.addEventListener("click", function () {
       var nameValue = data["name"];
       var tempValue = data["main"]["temp"];
       var descValue = data["weather"][0]["description"];
-
+      var iconValue = data["icon"];
       lat = data.coord.lat;
       long = data.coord.lon;
 
@@ -38,16 +43,12 @@ button.addEventListener("click", function () {
     .catch((err) => alert("Wrong city name!"));
   fetch(
     "https://api.openweathermap.org/data/2.5/onecall?" +
-      "lat=" +
       lat +
-      "&lon=" +
       long +
       "&appid=d99af31d18f58b92c977dbe59e43af60"
   )
     .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    });
+    .then((data) => {});
 });
 
 //Loop through cityArray and create city buttons
