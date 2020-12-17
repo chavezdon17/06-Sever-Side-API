@@ -1,6 +1,6 @@
 # 06-Sever-Side-API
 
-![screenshot](C:\Users\chave\Pictures\Screenshot.32 "website")
+![screenshot](assets/Screenshot%20(52).png)
 A working weather checker
 the user will be asked to enter a city to check the weather
 when the user types in a city
