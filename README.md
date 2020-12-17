@@ -34,6 +34,7 @@ MIT
 
 ## description
 
+![screenshot](<assets/Screenshot%20(52).png>)
 A working weather checker
 the user will be asked to enter a city to check the weather
 when the user types in a city
@@ -46,3 +47,5 @@ then the users response will be saved in local storage
 ## contributing
 
 Donovan Chavez
+
+> > > > > > > 5656069aef8c3ea8659408938b68576e084ef538
